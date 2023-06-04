@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="global-container">
+      <div class="font-container">
+        <div class="calculator-container">
+          <form class="calculator__form" action="" id="myform">
+            <div class="input-container">
+              <label class="show lsday" for="idday">DAY</label>
+              <input type="number" name="" id="idday" placeholder="DD" />
+              <label class="hidden lday" for="idday"></label>
+            </div>
+            <div class="input-container">
+              <label class="show lsmonth" for="idmonth">MONTH</label>
+              <input type="number" name="" id="idmonth" placeholder="MM" />
+              <label class="hidden lmonth" for="idmonth"></label>
+            </div>
+            <div class="input-container">
+              <label class="show lsyear" for="idyear">YEAR</label>
+              <input type="number" name="" id="idyear" placeholder="YYYY" />
+              <label class="hidden lyear" for="idyear"></label>
+            </div>
+          </form>
+          <div
+            class="btn-container"
+            onmousedown="setstyle()" ontouchstart="setstyle()"
+            onmouseup="defaultStyle()" ontouchend="defaultStyle()"
+            onmouseleave="defaultStyle()"
+          >
+            <button class="svg-button" type="submit" form="myform"></button>
+          </div>
+        </div>
+        <div class="result-container">
+          <div class="result-container__year">
+            <span class="spyear">--</span>
+            <h2>years</h2>
+          </div>
+          <div class="result-container__month">
+            <span class="spmonth">--</span>
+            <h2>months</h2>
+          </div>
+          <div class="result-container__day">
+            <span class="spday">--</span>
+            <h2>days</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Jean F. Zambrano</a>.
+    </div>
+    <script>
+      const setstyle = () => {
+        document.querySelector(".btn-container").style.backgroundColor = "#000";
+        document.querySelector(".svg-button").style.backgroundColor = "#000";
+      };
+      const defaultStyle = () => {
+        document.querySelector(".btn-container").style.backgroundColor =
+          "#854dff";
+        document.querySelector(".svg-button").style.backgroundColor = "#854dff";
+      };
+    </script>
+  </body>
+</html>

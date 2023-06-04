@@ -1,0 +1,167 @@
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url("./assets/fonts/Poppins-ExtraBoldItalic.ttf");
+}
+* {
+  box-sizing: border-box;
+  font-family: "Poppins-Bold";
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(0, 0%, 94%);
+}
+.global-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: hsl(0, 0%, 94%);
+  margin: 80px auto;
+  width: 1000px;
+  box-shadow: 0 5px 5px rgba(3, 3, 3, 0.1);
+  padding: 50px;
+  border-top: none;
+}
+.font-container {
+  background-color: hsl(0, 0%, 100%);
+  width: 75%;
+  padding: 20px 30px;
+  border-radius: 20px 20px 80px 20px;
+}
+.calculator-container {
+  border-bottom: 2px solid hsl(0, 0%, 94%);
+}
+.calculator__form {
+  display: flex;
+  flex-direction: row;
+}
+.result-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.result-container > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  height: fit-content;
+  max-height: fit-content;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+span {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  color: #854dff;
+  height: auto;
+}
+h2,
+span {
+  font-size: 59px;
+  margin: 0;
+}
+.btn-container {
+  background-color: #854dff;
+  width: 46px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  left: 93%;
+  top: 23px;
+}
+.svg-button {
+  user-select: none;
+  background-image: url("./assets/images/icon-arrow.svg");
+  background-size: cover;
+  background-color: #854dff;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+input[type="number"] {
+  font-size: 32px;
+  border: 1px solid hsl(0, 0%, 94%);
+  width: 60%;
+  padding: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  caret-color: #854dff;
+}
+input[type="number"]:focus,
+input[type="number"]:active {
+  outline: none;
+  border: 1px solid #854dff;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]::placeholder {
+  font-size: 26px;
+  font-family: "Poppins-Bold";
+}
+.hidden {
+  font-size: 10px;
+  color: hsl(0, 100%, 67%);
+  height: 20px;
+  width: 85%;
+}
+.show {
+  color: hsl(0, 1%, 44%);
+  font-size: 10px;
+}
+.red {
+  color: hsl(0, 100%, 67%);
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 900px) {
+  .global-container {
+    width: 375px;
+    padding: 50px 10px;
+    box-shadow: none;
+  }
+  .font-container {
+    width: 95%;
+    padding: 20px 15px;
+  }
+  .result-container {
+    margin-top: 40px;
+  }
+  input[type="number"] {
+    width: 91%;
+  }
+  .btn-container {
+    top: 23px;
+    left: 42%;
+  }
+  span {
+    font-size: 50px;
+  }
+}
