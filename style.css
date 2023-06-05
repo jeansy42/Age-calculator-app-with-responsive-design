@@ -79,6 +79,7 @@ span {
   position: relative;
   left: 93%;
   top: 23px;
+  cursor: pointer;
 }
 .svg-button {
   user-select: none;

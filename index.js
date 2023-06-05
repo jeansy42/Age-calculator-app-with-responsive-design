@@ -20,6 +20,7 @@ const lsday = document.querySelector(".lsday");
 const lsmonth = document.querySelector(".lsmonth");
 const lsyear = document.querySelector(".lsyear");
 const subbtn = document.querySelector(".svg-button");
+const btnContainer = document.querySelector(".btn-container");
 const allinput = document.querySelectorAll("[type=number]");
 const allLabHid = document.querySelectorAll(".hidden");
 const allLabShow = document.querySelectorAll(".show");
@@ -163,3 +164,19 @@ subbtn.addEventListener("click", (e) => {
   okmonth = true;
   okday = true;
 });
+btnContainer.addEventListener("click", () => {
+  subbtn.click();
+});
+for (const i of allinput) {
+  const arrayinput = Array.from(allinput);
+  let index = arrayinput.indexOf(i);
+  if (index != 2) {
+    i.addEventListener("input", () => {
+      if (i.value.length > 2) i.value = i.value.slice(0, 2);
+    });
+  } else {
+    i.addEventListener("input", () => {
+      if (i.value.length > 4) i.value = i.value.slice(0, 4);
+    });
+  }
+}
